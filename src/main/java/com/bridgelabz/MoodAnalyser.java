@@ -6,7 +6,11 @@ package com.bridgelabz;
  * @since - 2021-08-29
  */
 public class MoodAnalyser {
-    public static void main(String[] args) {
-        System.out.println("Welcome to the program");
+    public static String analyseMood(String message) {
+        if (message.contains("sad"))
+            return "sad";
+        else
+            return "Happy";
     }
 }
+
