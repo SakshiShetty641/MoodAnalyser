@@ -6,16 +6,20 @@ package com.bridgelabz;
  * @since - 2021-08-29
  */
 public class MoodAnalyser {
-    public static String analyseMood(String message) {
-            try {
-                if (message.contains("sad"))
-                    return "sad";
-                else
-                    return "Happy";
-            } catch (NullPointerException e) {
-                return "HAPPY";
-            }
+    enum s
+    {
+        S1
+    }
+    public static String analyseMood(String message) throws MoodAnalysisExceptions {
+        try {
+            if (message.contains("sad"))
+                return "sad";
+            else
+                return "Happy";
+        } catch (NullPointerException e) {
+            throw new MoodAnalysisExceptions("Invalid Message");
         }
+    }
     }
 
 
